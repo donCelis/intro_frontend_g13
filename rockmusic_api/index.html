@@ -13,11 +13,8 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <main class="bg-global py-2">
-      <header
-        class="border-bottom border-dark fixep-top bg-global"
-      >
+  <body class="bg-global">
+      <header class="border-bottom border-dark sticky-top bg-global">
         <div class="container">
           <nav class="navbar navbar-expand-md navbar-dark py-3">
             <a class="navbar-brand text-pacific" href="#">
@@ -43,7 +40,54 @@
           </nav>
         </div>
       </header>
-    </main>
+
+      <main id="banner" class="container">
+        <article class="row mb-4">
+          <aside class="col-12 col-lg-6 p-3" id="col-imagen">
+            <!-- Imagen Artista   -->
+          </aside>
+          <aside
+            class="col-12 col-lg-6 d-flex flex-column justify-content-center p-md-5 text-light"
+          >
+            <section class="row">
+              <aside class="col-md-12" id="info-banner">
+                <!-- Info Artista -->
+              </aside>
+              <aside class="col-md-12 d-grid gap-2">
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                >
+                  Anouk
+                </button>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                >
+                  30 Seconds to Mars
+                </button>
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                >
+                  Two Door Cinema Club
+                </button>
+              </aside>
+            </section>
+          </aside>
+        </article>
+      </main>
+
+      <section id="featured" class="container">
+        <div class="row">
+          <aside class="col pb-5 text-white text-center">
+            <h1>Featured Artists</h1>
+          </aside>
+        </div>
+        <div class="row" id="cards-container">
+          <!-- Contenido Cards -->
+        </div>
+      </section>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
