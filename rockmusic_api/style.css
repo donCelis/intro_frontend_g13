@@ -1,62 +1,60 @@
 :root {
-    --global-bg-color: hsl(240,67%,8%);
-    --border-card-color: rgba(192, 192, 192, 0.425);
-  }
-
-.bg-global{
-    background-color: var(--global-bg-color);
+  --global-bg-color: hsl(240, 67%, 8%);
+  --border-card-color: rgba(192, 192, 192, 0.425);
 }
 
-.btn{
-    border: 1px solid rgba(192, 192, 192, 0.425);
+.bg-global {
+  background-color: var(--global-bg-color);
 }
 
-.btn-primary{
- background-color: transparent !important;
- outline: none !important;
+.btn {
+  border: 1px solid var(--border-card-color);
 }
-.btn-primary:hover{
-    background-color: rgba(192, 192, 192, 0.438) !important;
-    border: 1px solid rgba(192, 192, 192, 0.425);
-   }
 
+.btn-primary {
+  background-color: transparent !important;
+  outline: none !important;
+}
+.btn-primary:hover {
+  background-color: var(--border-card-color) !important;
+  border: 1px solid var(--border-card-color);
+}
 
 .btn-primary:active {
-    color: #fff;
-    border-color: rgba(192, 192, 192, 0.425);
-    box-shadow: none;
-    background-color: blueviolet!important;
+  color: #fff;
+  border-color: var(--border-card-color);
+  box-shadow: none;
+  background-color: blueviolet !important;
 }
 
 .btn-primary:focus {
-    
-    color: #fff;
-    border-color: rgba(192, 192, 192, 0.425);
-    box-shadow: none;
-    background-color: blueviolet!important;
+  color: #fff;
+  border-color: var(--border-card-color);
+  box-shadow: none;
+  background-color: blueviolet !important;
 }
 
-.btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.25rem rgba(49, 131, 253, 0);
-    
+.btn-primary:active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(49, 131, 253, 0);
 }
 
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: transparent !important;
-    background-clip: border-box;
-    border: 1px solid var(--border-card-color);
-    border-radius: 0.25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: transparent !important;
+  background-clip: border-box;
+  border: 1px solid var(--border-card-color);
+  border-radius: 0.25rem;
 }
 
-.text-pacific{
-    font-family: 'Pacifico', cursive;
+.text-pacific {
+  font-family: "Pacifico", cursive;
 }
 
 .pt-5 {
-    padding-top: 6rem!important;
+  padding-top: 6rem !important;
 }
