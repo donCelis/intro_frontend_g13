@@ -4,7 +4,7 @@ import { getMovies } from '../services/getMovies'
 function App () {
   const onGetMovies = async (e) => {
     e.preventDefault()
-    const result = await getMovies({ query: 'superman' })
+    const result = await getMovies({ query: '' })
     console.log(result)
   }
   return (
