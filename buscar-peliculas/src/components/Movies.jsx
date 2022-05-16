@@ -5,7 +5,7 @@ export const Movies = ({ data }) => {
       data && data.length > 0
         ? (
           <>
-            <ul style={{ paddingInlineStart: '0' }} className='row'>
+            <ul style={{ paddingInlineStart: '0' }} className='row gx-4'>
               {
               data.map(movie => (
                 <li style={{ listStyle: 'none' }} key={movie.imdbID} className='col-3'>
