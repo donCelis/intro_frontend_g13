@@ -1,21 +1,35 @@
-import { Movies } from './Movies'
-import { getMovies } from '../services/getMovies'
-import { useRef, useState } from 'react'
+import { Movies } from '../components/Movies'
+import { getMovies } from '../services'
+import { useEffect, useRef, useState } from 'react'
 
 function App () {
   const buscarRef = useRef()
 
   const [data, setData] = useState([])
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const getData = async () => {
+      const result = await getMovies({ query: 'avengers' })
+      setData(result)
+    }
+    getData()
+  }, [])
 
   const onGetMovies = async (e) => {
     e.preventDefault()
     const { value } = buscarRef.current
     const result = await getMovies({ query: value })
-    setData(result)
+    if (result.sms) {
+      setData('')
+      setError(result)
+    } else {
+      setData(result)
+      setError('')
+    }
   }
   return (
-    <section className='container'>
-      <h4 className='py-4 text-center'>Buscardor de peliculas</h4>
+    <>
       {/* buscador */}
       <form onSubmit={onGetMovies}>
         <div className='input-group'>
@@ -24,13 +38,15 @@ function App () {
             type='text'
             className='form-control'
             placeholder='Buscar...'
+            required
           />
           <button className='btn btn-primary'>Buscar</button>
         </div>
       </form>
       {/* grid de peliculas */}
+      {error ? <p className='text-center py-4'>{error.sms}</p> : null}
       <Movies data={data} />
-    </section>
+    </>
   )
 }
 
