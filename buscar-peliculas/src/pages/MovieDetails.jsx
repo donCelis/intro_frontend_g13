@@ -10,11 +10,7 @@ export const MovieDetails = () => {
   useEffect(() => {
     const getData = async () => {
       const result = await getMoviesDetails({ id: idMovie })
-      if (result) {
-        setMovie(result)
-      } else {
-        navigate('/404')
-      }
+      result ? setMovie(result) : navigate('/404')
     }
     getData()
   }, [])
