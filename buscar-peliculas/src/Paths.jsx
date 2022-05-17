@@ -31,6 +31,10 @@ export const Paths = () => {
     },
     {
       path: '*',
+      element: <Navigate to='/404' replace />
+    },
+    {
+      path: '/404',
       element: <Page404 />
     }
   ])

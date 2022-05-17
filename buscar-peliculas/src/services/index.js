@@ -16,6 +16,6 @@ export const getMoviesDetails = async ({ id = '' }) => {
   const req = await axios.get(
     `https://www.omdbapi.com/?apikey=${APP_API_KEY}&i=${id}`
   )
-  const res = req.data.Response === 'True' ? req.data : {}
+  const res = req.data.Response === 'True' && req.data
   return res
 }
